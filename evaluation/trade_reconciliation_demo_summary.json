@@ -1,0 +1,20 @@
+{
+  "internal_rows": 13,
+  "external_rows": 13,
+  "match_status_counts": {
+    "REVIEW - FIELD CONFLICT": 4,
+    "MATCHED - EXACT": 3,
+    "REVIEW - AMBIGUOUS / DUPLICATE": 3,
+    "REVIEW - NARRATIVE EVIDENCE": 1,
+    "REVIEW - UNKNOWN EVIDENCE": 1
+  },
+  "unmatched_internal_rows": 1,
+  "unmatched_external_rows": 1,
+  "duplicate_groups": 1,
+  "evidence_answerability_counts": {
+    "ANSWERABLE": 127,
+    "NOT_FOUND": 2,
+    "AMBIGUOUS": 1
+  },
+  "note": "All trade rows and confirmation notes are synthetic examples."
+}

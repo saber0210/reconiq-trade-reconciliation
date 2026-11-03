@@ -1,0 +1,99 @@
+{
+  "training_rows": 198,
+  "positive_training_rows": 156,
+  "validation_rows_for_threshold_selection": 30,
+  "evaluation_rows": 50,
+  "detection_threshold": 0.125,
+  "category_thresholds": {
+    "SECURITY_IDENTITY": 0.425,
+    "TRADE_DATE": -0.425,
+    "SIDE": -0.275,
+    "QUANTITY": 0.05,
+    "PRICE_CURRENCY": -0.35,
+    "SETTLEMENT_DATE": 0.15,
+    "ACCOUNT_ALLOCATION": -0.3,
+    "DUPLICATE_OR_MISSING_LINK": -0.3
+  },
+  "validation_detection_f1": 0.9643,
+  "validation_category_macro_f1": 0.8292,
+  "raw_svm_detection_precision": 0.9756,
+  "raw_svm_detection_recall": 1.0,
+  "raw_svm_detection_f1": 0.9877,
+  "postprocessed_detection_precision": 1.0,
+  "postprocessed_detection_recall": 1.0,
+  "postprocessed_detection_f1": 1.0,
+  "detection_precision": 1.0,
+  "detection_recall": 1.0,
+  "detection_f1": 1.0,
+  "end_to_end_category_micro_precision": 0.9556,
+  "end_to_end_category_micro_recall": 0.8958,
+  "end_to_end_category_micro_f1": 0.9247,
+  "end_to_end_category_macro_precision": 0.9613,
+  "end_to_end_category_macro_recall": 0.9018,
+  "end_to_end_category_macro_f1": 0.9218,
+  "conditional_category_macro_precision_on_true_exceptions": 0.9613,
+  "conditional_category_macro_recall_on_true_exceptions": 0.9018,
+  "conditional_category_macro_f1_on_true_exceptions": 0.9218,
+  "exact_label_set_accuracy": 0.9,
+  "label_hamming_loss": 0.0175,
+  "per_label_end_to_end": {
+    "SECURITY_IDENTITY": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "support": 6
+    },
+    "TRADE_DATE": {
+      "precision": 0.8333,
+      "recall": 1.0,
+      "f1": 0.9091,
+      "support": 5
+    },
+    "SIDE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 5
+    },
+    "QUANTITY": {
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091,
+      "support": 6
+    },
+    "PRICE_CURRENCY": {
+      "precision": 0.8571,
+      "recall": 1.0,
+      "f1": 0.9231,
+      "support": 6
+    },
+    "SETTLEMENT_DATE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 6
+    },
+    "ACCOUNT_ALLOCATION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 7
+    },
+    "DUPLICATE_OR_MISSING_LINK": {
+      "precision": 1.0,
+      "recall": 0.7143,
+      "f1": 0.8333,
+      "support": 7
+    }
+  },
+  "detector_false_positive_cases": [],
+  "detector_false_negative_cases": [],
+  "multi_label_exact_set_error_cases": [
+    "EM0003",
+    "EM0004",
+    "EM0005",
+    "EM0006",
+    "EM0007"
+  ],
+  "note": "Synthetic, phrase-family-held-out fixture only. Not a production benchmark or real-world accuracy estimate."
+}

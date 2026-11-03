@@ -1,0 +1,199 @@
+case_id,group_id,text,labels
+TR0001,SECURITY_IDENTITY_TRAIN_1,"Security identifier differs across systems: internal ISIN US0378331005, broker ISIN US5949181045.",SECURITY_IDENTITY
+TR0002,SECURITY_IDENTITY_TRAIN_1,"Please review this exception. Security identifier differs across systems: internal ISIN US0378331005, broker ISIN US5949181045.",SECURITY_IDENTITY
+TR0003,SECURITY_IDENTITY_TRAIN_1,"Security identifier differs across systems: in-house ISIN US0378331005, custodian ISIN US5949181045.",SECURITY_IDENTITY
+TR0004,SECURITY_IDENTITY_TRAIN_2,OMS security code ABCD123456 does not match the custodian security code WXYZ987654.,SECURITY_IDENTITY
+TR0005,SECURITY_IDENTITY_TRAIN_2,Please review this exception. OMS security code ABCD123456 does not match the custodian security code WXYZ987654.,SECURITY_IDENTITY
+TR0006,SECURITY_IDENTITY_TRAIN_2,OMS security code ABCD123456 does not match the custodian security code WXYZ987654.,SECURITY_IDENTITY
+TR0007,SECURITY_IDENTITY_TRAIN_3,Instrument reference is inconsistent; broker reports ID 1002003004 while internal system reports ID 1002003999.,SECURITY_IDENTITY
+TR0008,SECURITY_IDENTITY_TRAIN_3,Please review this exception. Instrument reference is inconsistent; broker reports ID 1002003004 while internal system reports ID 1002003999.,SECURITY_IDENTITY
+TR0009,SECURITY_IDENTITY_TRAIN_3,Instrument reference is inconsistent; custodian reports ID 1002003004 while in-house system reports ID 1002003999.,SECURITY_IDENTITY
+TR0010,SECURITY_IDENTITY_TRAIN_4,The two records point to different instruments because their security identifiers do not agree.,SECURITY_IDENTITY
+TR0011,SECURITY_IDENTITY_TRAIN_4,Please review this exception. The two records point to different instruments because their security identifiers do not agree.,SECURITY_IDENTITY
+TR0012,SECURITY_IDENTITY_TRAIN_4,The two records point to different instruments because their security identifiers do not agree.,SECURITY_IDENTITY
+TR0013,TRADE_DATE_TRAIN_1,"Execution date differs: internal trade date 2026-10-20, broker trade date 2026-10-21.",TRADE_DATE
+TR0014,TRADE_DATE_TRAIN_1,"Please review this exception. Execution date differs: internal trade date 2026-10-20, broker trade date 2026-10-21.",TRADE_DATE
+TR0015,TRADE_DATE_TRAIN_1,"Execution date differs: in-house trade date 2026-10-20, custodian trade date 2026-10-21.",TRADE_DATE
+TR0016,TRADE_DATE_TRAIN_2,The OMS booked the transaction on 20 October but the broker confirmation says 21 October.,TRADE_DATE
+TR0017,TRADE_DATE_TRAIN_2,Please review this exception. The OMS booked the transaction on 20 October but the broker confirmation says 21 October.,TRADE_DATE
+TR0018,TRADE_DATE_TRAIN_2,The OMS booked the transaction on 20 October but the custodian confirmation says 21 October.,TRADE_DATE
+TR0019,TRADE_DATE_TRAIN_3,Trade date is inconsistent between the two sources; the external record is one day later.,TRADE_DATE
+TR0020,TRADE_DATE_TRAIN_3,Please review this exception. Trade date is inconsistent between the two sources; the external record is one day later.,TRADE_DATE
+TR0021,TRADE_DATE_TRAIN_3,Trade date is inconsistent between the two sources; the external record is one day later.,TRADE_DATE
+TR0022,TRADE_DATE_TRAIN_4,The execution timestamp in the internal file does not match the date on the confirmation.,TRADE_DATE
+TR0023,TRADE_DATE_TRAIN_4,Please review this exception. The execution timestamp in the internal file does not match the date on the confirmation.,TRADE_DATE
+TR0024,TRADE_DATE_TRAIN_4,The execution timestamp in the in-house file does not match the date on the confirmation.,TRADE_DATE
+TR0025,SIDE_TRAIN_1,Buy sell direction conflict: internal transaction is BUY but external confirmation is SELL.,SIDE
+TR0026,SIDE_TRAIN_1,Please review this exception. Buy sell direction conflict: internal transaction is BUY but external confirmation is SELL.,SIDE
+TR0027,SIDE_TRAIN_1,Buy sell direction conflict: in-house transaction is BUY but external confirmation is SELL.,SIDE
+TR0028,SIDE_TRAIN_2,The OMS shows a purchase while the broker reports a sale for the same security.,SIDE
+TR0029,SIDE_TRAIN_2,Please review this exception. The OMS shows a purchase while the broker reports a sale for the same security.,SIDE
+TR0030,SIDE_TRAIN_2,The OMS shows a purchase while the custodian reports a sale for the same security.,SIDE
+TR0031,SIDE_TRAIN_3,Trade direction is reversed across sources; BUY and SELL do not agree.,SIDE
+TR0032,SIDE_TRAIN_3,Please review this exception. Trade direction is reversed across sources; BUY and SELL do not agree.,SIDE
+TR0033,SIDE_TRAIN_3,Trade direction is reversed across sources; BUY and SELL do not agree.,SIDE
+TR0034,SIDE_TRAIN_4,One system records a buy order and the other records a sell execution.,SIDE
+TR0035,SIDE_TRAIN_4,Please review this exception. One system records a buy order and the other records a sell execution.,SIDE
+TR0036,SIDE_TRAIN_4,One system records a buy order and the other records a sell execution.,SIDE
+TR0037,QUANTITY_TRAIN_1,"Quantity mismatch: internal quantity 100 shares, broker quantity 95 shares.",QUANTITY
+TR0038,QUANTITY_TRAIN_1,"Please review this exception. Quantity mismatch: internal quantity 100 shares, broker quantity 95 shares.",QUANTITY
+TR0039,QUANTITY_TRAIN_1,"Quantity mismatch: in-house quantity 100 shares, custodian quantity 95 shares.",QUANTITY
+TR0040,QUANTITY_TRAIN_2,The OMS has 500 units but the custodian confirmation shows 450 units.,QUANTITY
+TR0041,QUANTITY_TRAIN_2,Please review this exception. The OMS has 500 units but the custodian confirmation shows 450 units.,QUANTITY
+TR0042,QUANTITY_TRAIN_2,The OMS has 500 units but the custodian confirmation shows 450 units.,QUANTITY
+TR0043,QUANTITY_TRAIN_3,Executed volume differs between files; the external feed reports fewer shares.,QUANTITY
+TR0044,QUANTITY_TRAIN_3,Please review this exception. Executed volume differs between files; the external feed reports fewer shares.,QUANTITY
+TR0045,QUANTITY_TRAIN_3,Executed volume differs between files; the external feed reports fewer shares.,QUANTITY
+TR0046,QUANTITY_TRAIN_4,Trade notional or unit count does not match the internally booked quantity.,QUANTITY
+TR0047,QUANTITY_TRAIN_4,Please review this exception. Trade notional or unit count does not match the internally booked quantity.,QUANTITY
+TR0048,QUANTITY_TRAIN_4,Trade notional or unit count does not match the in-housely booked quantity.,QUANTITY
+TR0049,PRICE_CURRENCY_TRAIN_1,"Price difference: internal execution price USD 225.50, broker execution price USD 226.10.",PRICE_CURRENCY
+TR0050,PRICE_CURRENCY_TRAIN_1,"Please review this exception. Price difference: internal execution price USD 225.50, broker execution price USD 226.10.",PRICE_CURRENCY
+TR0051,PRICE_CURRENCY_TRAIN_1,"Price difference: in-house execution price USD 225.50, custodian execution price USD 226.10.",PRICE_CURRENCY
+TR0052,PRICE_CURRENCY_TRAIN_2,The internal trade is denominated in USD while the external record is denominated in EUR.,PRICE_CURRENCY
+TR0053,PRICE_CURRENCY_TRAIN_2,Please review this exception. The internal trade is denominated in USD while the external record is denominated in EUR.,PRICE_CURRENCY
+TR0054,PRICE_CURRENCY_TRAIN_2,The in-house trade is denominated in USD while the external record is denominated in EUR.,PRICE_CURRENCY
+TR0055,PRICE_CURRENCY_TRAIN_3,Broker price does not agree with the OMS price and the currency code is different.,PRICE_CURRENCY
+TR0056,PRICE_CURRENCY_TRAIN_3,Please review this exception. Broker price does not agree with the OMS price and the currency code is different.,PRICE_CURRENCY
+TR0057,PRICE_CURRENCY_TRAIN_3,Broker price does not agree with the OMS price and the currency code is different.,PRICE_CURRENCY
+TR0058,PRICE_CURRENCY_TRAIN_4,Unit price or settlement currency is inconsistent between internal and external records.,PRICE_CURRENCY
+TR0059,PRICE_CURRENCY_TRAIN_4,Please review this exception. Unit price or settlement currency is inconsistent between internal and external records.,PRICE_CURRENCY
+TR0060,PRICE_CURRENCY_TRAIN_4,Unit price or settlement currency is inconsistent between in-house and external records.,PRICE_CURRENCY
+TR0061,SETTLEMENT_DATE_TRAIN_1,"Settlement date mismatch: internal expected settlement 2026-10-21, custodian date 2026-10-23.",SETTLEMENT_DATE
+TR0062,SETTLEMENT_DATE_TRAIN_1,"Please review this exception. Settlement date mismatch: internal expected settlement 2026-10-21, custodian date 2026-10-23.",SETTLEMENT_DATE
+TR0063,SETTLEMENT_DATE_TRAIN_1,"Settlement date mismatch: in-house expected settlement 2026-10-21, custodian date 2026-10-23.",SETTLEMENT_DATE
+TR0064,SETTLEMENT_DATE_TRAIN_2,The broker expects settlement on Friday while the internal record expects Thursday.,SETTLEMENT_DATE
+TR0065,SETTLEMENT_DATE_TRAIN_2,Please review this exception. The broker expects settlement on Friday while the internal record expects Thursday.,SETTLEMENT_DATE
+TR0066,SETTLEMENT_DATE_TRAIN_2,The custodian expects settlement on Friday while the in-house record expects Thursday.,SETTLEMENT_DATE
+TR0067,SETTLEMENT_DATE_TRAIN_3,Settlement instruction contains a different value date from the portfolio system.,SETTLEMENT_DATE
+TR0068,SETTLEMENT_DATE_TRAIN_3,Please review this exception. Settlement instruction contains a different value date from the portfolio system.,SETTLEMENT_DATE
+TR0069,SETTLEMENT_DATE_TRAIN_3,Settlement instruction contains a different value date from the portfolio system.,SETTLEMENT_DATE
+TR0070,SETTLEMENT_DATE_TRAIN_4,Expected settlement dates are inconsistent across the two trade records.,SETTLEMENT_DATE
+TR0071,SETTLEMENT_DATE_TRAIN_4,Please review this exception. Expected settlement dates are inconsistent across the two trade records.,SETTLEMENT_DATE
+TR0072,SETTLEMENT_DATE_TRAIN_4,Expected settlement dates are inconsistent across the two trade records.,SETTLEMENT_DATE
+TR0073,ACCOUNT_ALLOCATION_TRAIN_1,"Account allocation mismatch: internal account FUND_A, broker account FUND_B.",ACCOUNT_ALLOCATION
+TR0074,ACCOUNT_ALLOCATION_TRAIN_1,"Please review this exception. Account allocation mismatch: internal account FUND_A, broker account FUND_B.",ACCOUNT_ALLOCATION
+TR0075,ACCOUNT_ALLOCATION_TRAIN_1,"Account allocation mismatch: in-house account FUND_A, custodian account FUND_B.",ACCOUNT_ALLOCATION
+TR0076,ACCOUNT_ALLOCATION_TRAIN_2,The transaction is allocated to the wrong portfolio in the custodian file.,ACCOUNT_ALLOCATION
+TR0077,ACCOUNT_ALLOCATION_TRAIN_2,Please review this exception. The transaction is allocated to the wrong portfolio in the custodian file.,ACCOUNT_ALLOCATION
+TR0078,ACCOUNT_ALLOCATION_TRAIN_2,The transaction is allocated to the wrong portfolio in the custodian file.,ACCOUNT_ALLOCATION
+TR0079,ACCOUNT_ALLOCATION_TRAIN_3,Counterparty or fund allocation differs between the two systems.,ACCOUNT_ALLOCATION
+TR0080,ACCOUNT_ALLOCATION_TRAIN_3,Please review this exception. Counterparty or fund allocation differs between the two systems.,ACCOUNT_ALLOCATION
+TR0081,ACCOUNT_ALLOCATION_TRAIN_3,Counterparty or fund allocation differs between the two systems.,ACCOUNT_ALLOCATION
+TR0082,ACCOUNT_ALLOCATION_TRAIN_4,Broker account reference does not match the account recorded by the OMS.,ACCOUNT_ALLOCATION
+TR0083,ACCOUNT_ALLOCATION_TRAIN_4,Please review this exception. Broker account reference does not match the account recorded by the OMS.,ACCOUNT_ALLOCATION
+TR0084,ACCOUNT_ALLOCATION_TRAIN_4,Broker account reference does not match the account recorded by the OMS.,ACCOUNT_ALLOCATION
+TR0085,DUPLICATE_OR_MISSING_LINK_TRAIN_1,Duplicate booking detected: the same transaction appears twice in the external feed.,DUPLICATE_OR_MISSING_LINK
+TR0086,DUPLICATE_OR_MISSING_LINK_TRAIN_1,Please review this exception. Duplicate booking detected: the same transaction appears twice in the external feed.,DUPLICATE_OR_MISSING_LINK
+TR0087,DUPLICATE_OR_MISSING_LINK_TRAIN_1,Duplicate booking detected: the same transaction appears twice in the external feed.,DUPLICATE_OR_MISSING_LINK
+TR0088,DUPLICATE_OR_MISSING_LINK_TRAIN_2,The internal trade has no corresponding broker confirmation in the expected batch.,DUPLICATE_OR_MISSING_LINK
+TR0089,DUPLICATE_OR_MISSING_LINK_TRAIN_2,Please review this exception. The internal trade has no corresponding broker confirmation in the expected batch.,DUPLICATE_OR_MISSING_LINK
+TR0090,DUPLICATE_OR_MISSING_LINK_TRAIN_2,The in-house trade has no corresponding custodian confirmation in the expected batch.,DUPLICATE_OR_MISSING_LINK
+TR0091,DUPLICATE_OR_MISSING_LINK_TRAIN_3,Two external rows are competing for the same internal transaction reference.,DUPLICATE_OR_MISSING_LINK
+TR0092,DUPLICATE_OR_MISSING_LINK_TRAIN_3,Please review this exception. Two external rows are competing for the same internal transaction reference.,DUPLICATE_OR_MISSING_LINK
+TR0093,DUPLICATE_OR_MISSING_LINK_TRAIN_3,Two external rows are competing for the same in-house transaction reference.,DUPLICATE_OR_MISSING_LINK
+TR0094,DUPLICATE_OR_MISSING_LINK_TRAIN_4,One side contains an orphan transaction and the other side has a missing counterpart.,DUPLICATE_OR_MISSING_LINK
+TR0095,DUPLICATE_OR_MISSING_LINK_TRAIN_4,Please review this exception. One side contains an orphan transaction and the other side has a missing counterpart.,DUPLICATE_OR_MISSING_LINK
+TR0096,DUPLICATE_OR_MISSING_LINK_TRAIN_4,One side contains an orphan transaction and the other side has a missing counterpart.,DUPLICATE_OR_MISSING_LINK
+TM0097,MULTI_TRAIN_1,The broker reports 90 shares rather than 100 and an execution price of USD 41.20 rather than USD 40.90.,QUANTITY|PRICE_CURRENCY
+TM0098,MULTI_TRAIN_1,Please review this exception. The broker reports 90 shares rather than 100 and an execution price of USD 41.20 rather than USD 40.90.,QUANTITY|PRICE_CURRENCY
+TM0099,MULTI_TRAIN_1,The custodian reports 90 shares rather than 100 and an execution price of USD 41.20 rather than USD 40.90.,QUANTITY|PRICE_CURRENCY
+TM0100,MULTI_TRAIN_2,Trade date differs and the settlement value date is also inconsistent with the internal booking.,TRADE_DATE|SETTLEMENT_DATE
+TM0101,MULTI_TRAIN_2,Please review this exception. Trade date differs and the settlement value date is also inconsistent with the internal booking.,TRADE_DATE|SETTLEMENT_DATE
+TM0102,MULTI_TRAIN_2,Trade date differs and the settlement value date is also inconsistent with the in-house booking.,TRADE_DATE|SETTLEMENT_DATE
+TM0103,MULTI_TRAIN_3,The external record is assigned to a different portfolio and the security identifier is not the same.,ACCOUNT_ALLOCATION|SECURITY_IDENTITY
+TM0104,MULTI_TRAIN_3,Please review this exception. The external record is assigned to a different portfolio and the security identifier is not the same.,ACCOUNT_ALLOCATION|SECURITY_IDENTITY
+TM0105,MULTI_TRAIN_3,The external record is assigned to a different portfolio and the security identifier is not the same.,ACCOUNT_ALLOCATION|SECURITY_IDENTITY
+TM0106,MULTI_TRAIN_4,Two duplicate custodian rows show a sell transaction while the internal record is marked buy.,DUPLICATE_OR_MISSING_LINK|SIDE
+TM0107,MULTI_TRAIN_4,Please review this exception. Two duplicate custodian rows show a sell transaction while the internal record is marked buy.,DUPLICATE_OR_MISSING_LINK|SIDE
+TM0108,MULTI_TRAIN_4,Two duplicate custodian rows show a sell transaction while the in-house record is marked buy.,DUPLICATE_OR_MISSING_LINK|SIDE
+TM0109,MULTI_TRAIN_5,The broker used a different ISIN and the trade date is one day later than the OMS date.,SECURITY_IDENTITY|TRADE_DATE
+TM0110,MULTI_TRAIN_5,Please review this exception. The broker used a different ISIN and the trade date is one day later than the OMS date.,SECURITY_IDENTITY|TRADE_DATE
+TM0111,MULTI_TRAIN_5,The custodian used a different ISIN and the trade date is one day later than the OMS date.,SECURITY_IDENTITY|TRADE_DATE
+TM0112,MULTI_TRAIN_6,"The order side is BUY in the internal book but SELL externally, and the unit count is also lower.",SIDE|QUANTITY
+TM0113,MULTI_TRAIN_6,"Please review this exception. The order side is BUY in the internal book but SELL externally, and the unit count is also lower.",SIDE|QUANTITY
+TM0114,MULTI_TRAIN_6,"The order side is BUY in the in-house book but SELL externally, and the unit count is also lower.",SIDE|QUANTITY
+TM0115,MULTI_TRAIN_7,The broker assigned another portfolio and reports a different execution date.,ACCOUNT_ALLOCATION|TRADE_DATE
+TM0116,MULTI_TRAIN_7,Please review this exception. The broker assigned another portfolio and reports a different execution date.,ACCOUNT_ALLOCATION|TRADE_DATE
+TM0117,MULTI_TRAIN_7,The custodian assigned another portfolio and reports a different execution date.,ACCOUNT_ALLOCATION|TRADE_DATE
+TM0118,MULTI_TRAIN_8,The execution price differs and the expected value date is two days later at the custodian.,PRICE_CURRENCY|SETTLEMENT_DATE
+TM0119,MULTI_TRAIN_8,Please review this exception. The execution price differs and the expected value date is two days later at the custodian.,PRICE_CURRENCY|SETTLEMENT_DATE
+TM0120,MULTI_TRAIN_8,The execution price differs and the expected value date is two days later at the custodian.,PRICE_CURRENCY|SETTLEMENT_DATE
+TM0121,MULTI_TRAIN_9,An extra custodian booking appears and its reported notional is different from the OMS quantity.,DUPLICATE_OR_MISSING_LINK|QUANTITY
+TM0122,MULTI_TRAIN_9,Please review this exception. An extra custodian booking appears and its reported notional is different from the OMS quantity.,DUPLICATE_OR_MISSING_LINK|QUANTITY
+TM0123,MULTI_TRAIN_9,An extra custodian booking appears and its reported notional is different from the OMS quantity.,DUPLICATE_OR_MISSING_LINK|QUANTITY
+TM0124,MULTI_TRAIN_10,The instrument code differs and the external execution price is also inconsistent.,SECURITY_IDENTITY|PRICE_CURRENCY
+TM0125,MULTI_TRAIN_10,Please review this exception. The instrument code differs and the external execution price is also inconsistent.,SECURITY_IDENTITY|PRICE_CURRENCY
+TM0126,MULTI_TRAIN_10,The instrument code differs and the external execution price is also inconsistent.,SECURITY_IDENTITY|PRICE_CURRENCY
+TM0127,MULTI_TRAIN_11,The fund allocation is incorrect and the external confirmation reverses the trade direction.,ACCOUNT_ALLOCATION|SIDE
+TM0128,MULTI_TRAIN_11,Please review this exception. The fund allocation is incorrect and the external confirmation reverses the trade direction.,ACCOUNT_ALLOCATION|SIDE
+TM0129,MULTI_TRAIN_11,The fund allocation is incorrect and the external confirmation reverses the trade direction.,ACCOUNT_ALLOCATION|SIDE
+TM0130,MULTI_TRAIN_12,The broker and portfolio system disagree on both the execution date and the execution price.,TRADE_DATE|PRICE_CURRENCY
+TM0131,MULTI_TRAIN_12,Please review this exception. The broker and portfolio system disagree on both the execution date and the execution price.,TRADE_DATE|PRICE_CURRENCY
+TM0132,MULTI_TRAIN_12,The custodian and portfolio system disagree on both the execution date and the execution price.,TRADE_DATE|PRICE_CURRENCY
+TM0133,MULTI_TRAIN_13,The clearing member confirms 210 units rather than 200 and the transaction currency is EUR instead of USD.,QUANTITY|PRICE_CURRENCY
+TM0134,MULTI_TRAIN_13,Please review this exception. The clearing member confirms 210 units rather than 200 and the transaction currency is EUR instead of USD.,QUANTITY|PRICE_CURRENCY
+TM0135,MULTI_TRAIN_13,The clearing member confirms 210 units rather than 200 and the transaction currency is EUR instead of USD.,QUANTITY|PRICE_CURRENCY
+TM0136,MULTI_TRAIN_14,This execution was allocated to Fund B and the custodian value date is later than the internal settlement date.,ACCOUNT_ALLOCATION|SETTLEMENT_DATE
+TM0137,MULTI_TRAIN_14,Please review this exception. This execution was allocated to Fund B and the custodian value date is later than the internal settlement date.,ACCOUNT_ALLOCATION|SETTLEMENT_DATE
+TM0138,MULTI_TRAIN_14,This execution was allocated to Fund B and the custodian value date is later than the in-house settlement date.,ACCOUNT_ALLOCATION|SETTLEMENT_DATE
+TM0139,MULTI_TRAIN_15,The custodian sent two copies of the trade and one record reverses the order from BUY to SELL.,DUPLICATE_OR_MISSING_LINK|SIDE
+TM0140,MULTI_TRAIN_15,Please review this exception. The custodian sent two copies of the trade and one record reverses the order from BUY to SELL.,DUPLICATE_OR_MISSING_LINK|SIDE
+TM0141,MULTI_TRAIN_15,The custodian sent two copies of the trade and one record reverses the order from BUY to SELL.,DUPLICATE_OR_MISSING_LINK|SIDE
+TM0142,MULTI_TRAIN_16,The broker confirmation is absent for one instrument and the security identifier differs across the two books.,DUPLICATE_OR_MISSING_LINK|SECURITY_IDENTITY
+TM0143,MULTI_TRAIN_16,Please review this exception. The broker confirmation is absent for one instrument and the security identifier differs across the two books.,DUPLICATE_OR_MISSING_LINK|SECURITY_IDENTITY
+TM0144,MULTI_TRAIN_16,The custodian confirmation is absent for one instrument and the security identifier differs across the two books.,DUPLICATE_OR_MISSING_LINK|SECURITY_IDENTITY
+TM0145,MULTI_TRAIN_17,The security reference is different and the external execution was booked a day after the internal trade date.,SECURITY_IDENTITY|TRADE_DATE
+TM0146,MULTI_TRAIN_17,Please review this exception. The security reference is different and the external execution was booked a day after the internal trade date.,SECURITY_IDENTITY|TRADE_DATE
+TM0147,MULTI_TRAIN_17,The security reference is different and the external execution was booked a day after the in-house trade date.,SECURITY_IDENTITY|TRADE_DATE
+TM0148,MULTI_TRAIN_18,"The broker allocation is to another portfolio and the external file contains 1,450 units instead of 1,500.",ACCOUNT_ALLOCATION|QUANTITY
+TM0149,MULTI_TRAIN_18,"Please review this exception. The broker allocation is to another portfolio and the external file contains 1,450 units instead of 1,500.",ACCOUNT_ALLOCATION|QUANTITY
+TM0150,MULTI_TRAIN_18,"The custodian allocation is to another portfolio and the external file contains 1,450 units instead of 1,500.",ACCOUNT_ALLOCATION|QUANTITY
+TM0151,MULTI_TRAIN_19,The value date does not align with the OMS and the external execution price differs from the internal price.,SETTLEMENT_DATE|PRICE_CURRENCY
+TM0152,MULTI_TRAIN_19,Please review this exception. The value date does not align with the OMS and the external execution price differs from the internal price.,SETTLEMENT_DATE|PRICE_CURRENCY
+TM0153,MULTI_TRAIN_19,The value date does not align with the OMS and the external execution price differs from the in-house price.,SETTLEMENT_DATE|PRICE_CURRENCY
+TM0154,MULTI_TRAIN_20,An extra custodian row has been booked to the wrong fund account.,DUPLICATE_OR_MISSING_LINK|ACCOUNT_ALLOCATION
+TM0155,MULTI_TRAIN_20,Please review this exception. An extra custodian row has been booked to the wrong fund account.,DUPLICATE_OR_MISSING_LINK|ACCOUNT_ALLOCATION
+TM0156,MULTI_TRAIN_20,An extra custodian row has been booked to the wrong fund account.,DUPLICATE_OR_MISSING_LINK|ACCOUNT_ALLOCATION
+TN0157,NEG_TRAIN_1,"No discrepancy was identified: the security, trade date, side, quantity, price and account agree across both sources.",
+TN0158,NEG_TRAIN_1,"Please review this exception. No discrepancy was identified: the security, trade date, side, quantity, price and account agree across both sources.",
+TN0159,NEG_TRAIN_1,"No discrepancy was identified: the security, trade date, side, quantity, price and account agree across both sources.",
+TN0160,NEG_TRAIN_2,"The broker confirms the same instrument, BUY direction, 100 shares and USD 25.10 as the internal ledger; no exception remains.",
+TN0161,NEG_TRAIN_2,"Please review this exception. The broker confirms the same instrument, BUY direction, 100 shares and USD 25.10 as the internal ledger; no exception remains.",
+TN0162,NEG_TRAIN_2,"The custodian confirms the same instrument, BUY direction, 100 shares and USD 25.10 as the in-house ledger; no exception remains.",
+TN0163,NEG_TRAIN_3,A previous date mismatch was corrected. The final trade date and settlement date now match the OMS.,
+TN0164,NEG_TRAIN_3,Please review this exception. A previous date mismatch was corrected. The final trade date and settlement date now match the OMS.,
+TN0165,NEG_TRAIN_3,A previous date mismatch was corrected. The final trade date and settlement date now match the OMS.,
+TN0166,NEG_TRAIN_4,The analyst checked the account allocation and counterparty. Both records refer to the same fund and broker.,
+TN0167,NEG_TRAIN_4,Please review this exception. The analyst checked the account allocation and counterparty. Both records refer to the same fund and broker.,
+TN0168,NEG_TRAIN_4,The analyst checked the account allocation and counterparty. Both records refer to the same fund and custodian.,
+TN0169,NEG_TRAIN_5,There is one internal booking and one broker confirmation. No duplicate or missing link was found.,
+TN0170,NEG_TRAIN_5,Please review this exception. There is one internal booking and one broker confirmation. No duplicate or missing link was found.,
+TN0171,NEG_TRAIN_5,There is one in-house booking and one custodian confirmation. No duplicate or missing link was found.,
+TN0172,NEG_TRAIN_6,The security identifier and description are consistent. The price and currency also agree.,
+TN0173,NEG_TRAIN_6,Please review this exception. The security identifier and description are consistent. The price and currency also agree.,
+TN0174,NEG_TRAIN_6,The security identifier and description are consistent. The price and currency also agree.,
+TN0175,NEG_TRAIN_7,Both systems show the same ISIN and the same execution date; there is no break to investigate.,
+TN0176,NEG_TRAIN_7,Please review this exception. Both systems show the same ISIN and the same execution date; there is no break to investigate.,
+TN0177,NEG_TRAIN_7,Both systems show the same ISIN and the same execution date; there is no break to investigate.,
+TN0178,NEG_TRAIN_8,Trade date and expected settlement date are aligned in the OMS and custodian confirmation.,
+TN0179,NEG_TRAIN_8,Please review this exception. Trade date and expected settlement date are aligned in the OMS and custodian confirmation.,
+TN0180,NEG_TRAIN_8,Trade date and expected settlement date are aligned in the OMS and custodian confirmation.,
+TN0181,NEG_TRAIN_9,The BUY instruction is confirmed as BUY by the broker; the transaction direction agrees.,
+TN0182,NEG_TRAIN_9,Please review this exception. The BUY instruction is confirmed as BUY by the broker; the transaction direction agrees.,
+TN0183,NEG_TRAIN_9,The BUY instruction is confirmed as BUY by the custodian; the transaction direction agrees.,
+TN0184,NEG_TRAIN_10,"Internal units and external units are both 250, so quantity is reconciled.",
+TN0185,NEG_TRAIN_10,"Please review this exception. Internal units and external units are both 250, so quantity is reconciled.",
+TN0186,NEG_TRAIN_10,"Internal units and external units are both 250, so quantity is reconciled.",
+TN0187,NEG_TRAIN_11,The internal and external prices are both USD 19.75. No price or currency variance was found.,
+TN0188,NEG_TRAIN_11,Please review this exception. The internal and external prices are both USD 19.75. No price or currency variance was found.,
+TN0189,NEG_TRAIN_11,The in-house and external prices are both USD 19.75. No price or currency variance was found.,
+TN0190,NEG_TRAIN_12,The fund code and counterparty reference match exactly between the two files.,
+TN0191,NEG_TRAIN_12,Please review this exception. The fund code and counterparty reference match exactly between the two files.,
+TN0192,NEG_TRAIN_12,The fund code and counterparty reference match exactly between the two files.,
+TN0193,NEG_TRAIN_13,There is exactly one internal trade and one corresponding external confirmation; no duplicate or orphan exists.,
+TN0194,NEG_TRAIN_13,Please review this exception. There is exactly one internal trade and one corresponding external confirmation; no duplicate or orphan exists.,
+TN0195,NEG_TRAIN_13,There is exactly one in-house trade and one corresponding external confirmation; no duplicate or orphan exists.,
+TN0196,NEG_TRAIN_14,The earlier quantity break has been corrected and the final values now agree across both sources.,
+TN0197,NEG_TRAIN_14,Please review this exception. The earlier quantity break has been corrected and the final values now agree across both sources.,
+TN0198,NEG_TRAIN_14,The earlier quantity break has been corrected and the final values now agree across both sources.,

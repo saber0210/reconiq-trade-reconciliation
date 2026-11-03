@@ -1,0 +1,106 @@
+ANSWERABILITY FIXTURE
+{
+  "examples": 23,
+  "expected_answerability_counts": {
+    "ANSWERABLE": 11,
+    "NOT_FOUND": 6,
+    "AMBIGUOUS": 6
+  },
+  "state_correct": 23,
+  "value_correct": 23,
+  "answerable_examples": 11,
+  "answerable_quotes_verified": 11,
+  "note": "Hand-authored parser fixtures; not a real-world model benchmark."
+}
+
+TWO-STAGE EXCEPTION CLASSIFIER
+training_rows: 198
+positive_training_rows: 156
+validation_rows_for_threshold_selection: 30
+evaluation_rows: 50
+raw_svm_detection_precision: 0.9756
+raw_svm_detection_recall: 1.0
+raw_svm_detection_f1: 0.9877
+postprocessed_detection_precision: 1.0
+postprocessed_detection_recall: 1.0
+postprocessed_detection_f1: 1.0
+end_to_end_category_micro_precision: 0.9556
+end_to_end_category_micro_recall: 0.8958
+end_to_end_category_micro_f1: 0.9247
+end_to_end_category_macro_f1: 0.9218
+conditional_category_macro_f1_on_true_exceptions: 0.9218
+exact_label_set_accuracy: 0.9
+
+PER-LABEL PERFORMANCE
+{
+  "SECURITY_IDENTITY": {
+    "precision": 1.0,
+    "recall": 0.6667,
+    "f1": 0.8,
+    "support": 6
+  },
+  "TRADE_DATE": {
+    "precision": 0.8333,
+    "recall": 1.0,
+    "f1": 0.9091,
+    "support": 5
+  },
+  "SIDE": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 5
+  },
+  "QUANTITY": {
+    "precision": 1.0,
+    "recall": 0.8333,
+    "f1": 0.9091,
+    "support": 6
+  },
+  "PRICE_CURRENCY": {
+    "precision": 0.8571,
+    "recall": 1.0,
+    "f1": 0.9231,
+    "support": 6
+  },
+  "SETTLEMENT_DATE": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 6
+  },
+  "ACCOUNT_ALLOCATION": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 7
+  },
+  "DUPLICATE_OR_MISSING_LINK": {
+    "precision": 1.0,
+    "recall": 0.7143,
+    "f1": 0.8333,
+    "support": 7
+  }
+}
+
+TRADE RECONCILIATION FIXTURE
+{
+  "internal_rows": 13,
+  "external_rows": 13,
+  "match_status_counts": {
+    "REVIEW - FIELD CONFLICT": 4,
+    "MATCHED - EXACT": 3,
+    "REVIEW - AMBIGUOUS / DUPLICATE": 3,
+    "REVIEW - NARRATIVE EVIDENCE": 1,
+    "REVIEW - UNKNOWN EVIDENCE": 1
+  },
+  "unmatched_internal_rows": 1,
+  "unmatched_external_rows": 1,
+  "duplicate_groups": 1,
+  "evidence_answerability_counts": {
+    "ANSWERABLE": 127,
+    "NOT_FOUND": 2,
+    "AMBIGUOUS": 1
+  },
+  "note": "All trade rows and confirmation notes are synthetic examples."
+}

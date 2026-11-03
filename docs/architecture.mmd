@@ -1,0 +1,17 @@
+flowchart TD
+    A[Internal OMS / portfolio-accounting export] --> C[Raw staging + data profiling]
+    B[External broker / custodian export + confirmation note] --> C
+    C --> D[Answerability-aware field extraction]
+    D --> E[Exact quote + value verification]
+    E --> F[Standardised trade schema]
+    F --> G[Candidate linkage: security ID + TF-IDF descriptions]
+    B --> H[Sentence segmentation + offsets]
+    H --> I[Binary exception detector: Linear SVM]
+    I --> J[Multi-label exception categories: one-vs-rest SVM]
+    J --> K[Context / post-processing + reviewer suggestions]
+    G --> L[Deterministic R1-R6 comparison]
+    F --> L
+    K --> M[Rule / ML disagreement view]
+    L --> M
+    M --> N[Human analyst: approve / reject / investigate]
+    N --> O[Review CSV + evidence ledger + audit trail]

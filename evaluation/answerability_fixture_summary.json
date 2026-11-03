@@ -1,0 +1,13 @@
+{
+  "examples": 23,
+  "expected_answerability_counts": {
+    "ANSWERABLE": 11,
+    "NOT_FOUND": 6,
+    "AMBIGUOUS": 6
+  },
+  "state_correct": 23,
+  "value_correct": 23,
+  "answerable_examples": 11,
+  "answerable_quotes_verified": 11,
+  "note": "Hand-authored parser fixtures; not a real-world model benchmark."
+}

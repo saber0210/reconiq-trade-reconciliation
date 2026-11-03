@@ -1,0 +1,51 @@
+case_id,group_id,text,labels
+EV0001,SECURITY_IDENTITY_HOLDOUT_1,"Security identifier differs across systems: portfolio ISIN US0378331005, clearing member ISIN US5949181045.",SECURITY_IDENTITY
+EV0002,SECURITY_IDENTITY_HOLDOUT_1,"Please investigate: Security identifier differs across systems: internal ISIN US0378331005, broker ISIN US5949181045.",SECURITY_IDENTITY
+EV0003,SECURITY_IDENTITY_HOLDOUT_2,OMS security code ABCD123456 does not match the custodian security code WXYZ987654.,SECURITY_IDENTITY
+EV0004,SECURITY_IDENTITY_HOLDOUT_2,Please investigate: OMS security code ABCD123456 does not match the custodian security code WXYZ987654.,SECURITY_IDENTITY
+EV0005,TRADE_DATE_HOLDOUT_1,"Execution date differs: portfolio trade date 2026-10-20, clearing member trade date 2026-10-21.",TRADE_DATE
+EV0006,TRADE_DATE_HOLDOUT_1,"Please investigate: Execution date differs: internal trade date 2026-10-20, broker trade date 2026-10-21.",TRADE_DATE
+EV0007,TRADE_DATE_HOLDOUT_2,The OMS booked the transaction on 20 October but the clearing member confirmation says 21 October.,TRADE_DATE
+EV0008,TRADE_DATE_HOLDOUT_2,Please investigate: The OMS booked the transaction on 20 October but the broker confirmation says 21 October.,TRADE_DATE
+EV0009,SIDE_HOLDOUT_1,Buy sell direction conflict: portfolio transaction is BUY but external confirmation is SELL.,SIDE
+EV0010,SIDE_HOLDOUT_1,Please investigate: Buy sell direction conflict: internal transaction is BUY but external confirmation is SELL.,SIDE
+EV0011,SIDE_HOLDOUT_2,The OMS shows a purchase while the clearing member reports a sale for the same security.,SIDE
+EV0012,SIDE_HOLDOUT_2,Please investigate: The OMS shows a purchase while the broker reports a sale for the same security.,SIDE
+EV0013,QUANTITY_HOLDOUT_1,"Quantity mismatch: portfolio quantity 100 shares, clearing member quantity 95 shares.",QUANTITY
+EV0014,QUANTITY_HOLDOUT_1,"Please investigate: Quantity mismatch: internal quantity 100 shares, broker quantity 95 shares.",QUANTITY
+EV0015,QUANTITY_HOLDOUT_2,The OMS has 500 units but the custodian confirmation shows 450 units.,QUANTITY
+EV0016,QUANTITY_HOLDOUT_2,Please investigate: The OMS has 500 units but the custodian confirmation shows 450 units.,QUANTITY
+EV0017,PRICE_CURRENCY_HOLDOUT_1,"Price difference: portfolio execution price USD 225.50, clearing member execution price USD 226.10.",PRICE_CURRENCY
+EV0018,PRICE_CURRENCY_HOLDOUT_1,"Please investigate: Price difference: internal execution price USD 225.50, broker execution price USD 226.10.",PRICE_CURRENCY
+EV0019,PRICE_CURRENCY_HOLDOUT_2,The portfolio trade is denominated in USD while the external record is denominated in EUR.,PRICE_CURRENCY
+EV0020,PRICE_CURRENCY_HOLDOUT_2,Please investigate: The internal trade is denominated in USD while the external record is denominated in EUR.,PRICE_CURRENCY
+EV0021,SETTLEMENT_DATE_HOLDOUT_1,"Settlement date mismatch: portfolio expected settlement 2026-10-21, custodian date 2026-10-23.",SETTLEMENT_DATE
+EV0022,SETTLEMENT_DATE_HOLDOUT_1,"Please investigate: Settlement date mismatch: internal expected settlement 2026-10-21, custodian date 2026-10-23.",SETTLEMENT_DATE
+EV0023,SETTLEMENT_DATE_HOLDOUT_2,The clearing member expects settlement on Friday while the portfolio record expects Thursday.,SETTLEMENT_DATE
+EV0024,SETTLEMENT_DATE_HOLDOUT_2,Please investigate: The broker expects settlement on Friday while the internal record expects Thursday.,SETTLEMENT_DATE
+EV0025,ACCOUNT_ALLOCATION_HOLDOUT_1,"Account allocation mismatch: portfolio account FUND_A, clearing member account FUND_B.",ACCOUNT_ALLOCATION
+EV0026,ACCOUNT_ALLOCATION_HOLDOUT_1,"Please investigate: Account allocation mismatch: internal account FUND_A, broker account FUND_B.",ACCOUNT_ALLOCATION
+EV0027,ACCOUNT_ALLOCATION_HOLDOUT_2,The transaction is allocated to the wrong portfolio in the custodian file.,ACCOUNT_ALLOCATION
+EV0028,ACCOUNT_ALLOCATION_HOLDOUT_2,Please investigate: The transaction is allocated to the wrong portfolio in the custodian file.,ACCOUNT_ALLOCATION
+EV0029,DUPLICATE_OR_MISSING_LINK_HOLDOUT_1,Duplicate booking detected: the same transaction appears twice in the external feed.,DUPLICATE_OR_MISSING_LINK
+EV0030,DUPLICATE_OR_MISSING_LINK_HOLDOUT_1,Please investigate: Duplicate booking detected: the same transaction appears twice in the external feed.,DUPLICATE_OR_MISSING_LINK
+EV0031,DUPLICATE_OR_MISSING_LINK_HOLDOUT_2,The portfolio trade has no corresponding clearing member confirmation in the expected batch.,DUPLICATE_OR_MISSING_LINK
+EV0032,DUPLICATE_OR_MISSING_LINK_HOLDOUT_2,Please investigate: The internal trade has no corresponding broker confirmation in the expected batch.,DUPLICATE_OR_MISSING_LINK
+EM0001,MULTI_HOLDOUT_1,The external side has 75 shares instead of 80 and its currency is EUR instead of USD.,QUANTITY|PRICE_CURRENCY
+EM0002,MULTI_HOLDOUT_2,The account is not the expected fund and the broker used a different settlement date.,ACCOUNT_ALLOCATION|SETTLEMENT_DATE
+EM0003,MULTI_HOLDOUT_3,"The OMS says BUY, but the external duplicate record says SELL.",DUPLICATE_OR_MISSING_LINK|SIDE
+EM0004,MULTI_HOLDOUT_4,A missing counterparty confirmation also contains a different security code.,DUPLICATE_OR_MISSING_LINK|SECURITY_IDENTITY
+EM0005,MULTI_HOLDOUT_5,The broker security code is not the same and the execution date does not line up with the book.,SECURITY_IDENTITY|TRADE_DATE
+EM0006,MULTI_HOLDOUT_6,"The portfolio has recorded 1,500 units while the external party shows 1,450, with a separate account allocated.",QUANTITY|ACCOUNT_ALLOCATION
+EM0007,MULTI_HOLDOUT_7,The settlement value date and price currency both differ from the internal booking.,SETTLEMENT_DATE|PRICE_CURRENCY
+EM0008,MULTI_HOLDOUT_8,The custodian sent a duplicate transaction and the instrument is allocated to another fund.,DUPLICATE_OR_MISSING_LINK|ACCOUNT_ALLOCATION
+EN0001,NEG_HOLDOUT_1,All trade fields have been reconciled and no breaks remain in the batch.,
+EN0002,NEG_HOLDOUT_2,The prior quantity discrepancy was corrected; both feeds now show 250 units.,
+EN0003,NEG_HOLDOUT_3,One broker confirmation corresponds to one internal trade and the security and account agree.,
+EN0004,NEG_HOLDOUT_4,The trade date and settlement date are the same in the portfolio system and custodian record.,
+EN0005,NEG_HOLDOUT_5,"Both sides show BUY, the quantity and price agree, and the counterparty allocation is correct.",
+EN0006,NEG_HOLDOUT_6,"No security mismatch, date discrepancy, side break or duplicate was found in the final review.",
+EN0007,NEG_HOLDOUT_7,A previous price variance was corrected; the final currency and price are identical.,
+EN0008,NEG_HOLDOUT_8,The custodian confirmation is present and linked to one unique internal transaction.,
+EN0009,NEG_HOLDOUT_9,"There is no duplicate, no orphan and one corresponding external confirmation for each internal trade.",
+EN0010,NEG_HOLDOUT_10,"The two feeds contain the same account, same side and same quantity, so there is no allocation or quantity break.",
